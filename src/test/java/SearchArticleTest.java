@@ -1,12 +1,12 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,7 +17,7 @@ public class SearchArticleTest {
     private String baseUrl;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @Before
+    @BeforeClass
     public void setUp() throws Exception {
         //chose driver type
         String os = (System.getProperty("os.name"));
@@ -60,7 +60,7 @@ public class SearchArticleTest {
         System.out.println("testing done.");
     }
 
-    @After
+    @AfterClass
     public void tearDown() throws Exception {
         if (driver != null)
             driver.quit();
