@@ -22,9 +22,9 @@ public class SearchArticleTest {
         //chose driver type
         String os = (System.getProperty("os.name"));
 
-        if (os.equalsIgnoreCase("Mac OS X"))
+//        if (os.equalsIgnoreCase("Mac OS X"))
             System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
-        else System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+//        else System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
