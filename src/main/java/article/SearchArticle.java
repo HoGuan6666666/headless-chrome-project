@@ -51,6 +51,7 @@ public class SearchArticle {
         System.out.println(title);
 
         System.out.println("testing done.");
+        System.out.println("for hook testing");
 
         if (driver != null)
             driver.quit();
